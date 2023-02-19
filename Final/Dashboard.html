@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header id="page-head-logo">LocalMart</header>
+    <div id="info-corner" class="info-corner">
+        <button class="info-corner" onclick="window.location.href='About.html';">About</button>
+        <button class=" info-corner" onclick="window.location.href='Career.html';">Career</button>
+        <button class="info-corner" onclick="window.location.href='profile.html';">Profile</button>
+        <button class="info-corner" onclick="window.location.href='index.html';">Logout</button>
+
+    </div>
+    <hr>
+    <br>
+    <div class="top" id="electronics">
+        <button class="buttons" onclick="window.location.href='profile.html';">Electronics</button>
+    </div>
+    <div id="salebackground">
+        <img src="https://thumbs.dreamstime.com/b/yellow-tag-flash-sale-hour-promotion-website-banner-heading-design-graphic-purple-background-vector-poster-discounts-134527399.jpg"
+            alt="Image is not Available at the moment the link might be broken. sorry for the inconvinence" height="450"
+            , width="1400">
+    </div>
+    <br>
+    <br>
+    <div class=" top">
+        <button class="buttons" id="sphones" onclick="window.location.href='profile.html';">smartphones</button>
+    </div>
+    <br>
+    <div class="top">
+        <button class="buttons" onclick="window.location.href='profile.html';">AC's and Rfrigerator</button>
+    </div>
+    <br>
+    <span id="today-deals">Today's Lightning Deals</span>
+    <br>
+    <div class="top">
+        <button class="buttons" id="washing" onclick="window.location.href='profile.html';">Washing Machines</button>
+    </div>
+
+    <div class="deals">
+        <div class="deal-item-box" onclick="window.location.href='profile.html';">
+            <img src="https://m.media-amazon.com/images/I/41lpiu-GMXL._SY445_SX342_QL70_FMwebp_.jpg" alt="" id="deal1">
+            <span id="deal1-discp">2022 Mackbook air with M2 chip Rs 1,06,999</span>
+
+        </div>
+        <div class="deal-item-box" onclick="window.location.href='profile.html';">
+            <img src="https://m.media-amazon.com/images/I/71jz+ZjO1-L._UX679_.jpg" alt="" id="deal2">
+            <span id="deal2-discp">Diesel Mr daddy analog watch Rs 25000</span>
+
+        </div>
+        <div class="deal-item-box">
+            <img src="https://m.media-amazon.com/images/I/51uVckL1jRL._SY300_SX300_QL70_FMwebp_.jpg" alt="" id="deal3">
+            <span id="deal3-discp">Sony Bravia 65inch led smart TV Rs 72,999</span>
+        </div>
+        <div class="deal-item-box" onclick="window.location.href='profile.html';">
+            <img src="https://m.media-amazon.com/images/I/51JFb7FctDL._SX679_.jpg" alt="" id="deal4">
+            <span id="deal4-discp">LG 1.5 Ton 5 Star invertor AC Rs 46,490</span>
+        </div>
+        <div class="deal-item-box" onclick="window.location.href='profile.html';">
+            <img src="https://m.media-amazon.com/images/I/41WpkxwZ+WL._SY300_SX300_.jpg" alt="" id="deal5">
+            <span id="deal5-discp">Samsung S23 ultra edge Rs1,24,999/</span>
+
+        </div>
+
+
+    </div>
+    <br>
+    <div class="top">
+        <button class="buttons" id="speaker" onclick="window.location.href='profile.html';">Speakers and
+            Headphones</button>
+    </div>
+    <br>
+    <div class="top">
+        <button class="buttons" onclick="window.location.href='profile.html';">Watches</button>
+    </div>
+    <br>
+    <div class="top">
+        <button class="buttons" onclick="window.location.href='profile.html';">TV's and Laptops</button>
+    </div>
+    <br>
+    <div class="top">More comming soon</div>
+    <br>
+    <div class="chatbot" onclick="togglediv()">
+        <p id="botlogo"><b>Ask</b></p>
+    </div>
+    <br>
+    <div class="bot-interface" id="bot-interface">
+        <p id="notice"><b>Welcome User. Please note that the bot is Under Developement and May not fullfill the Solution
+                which You are
+                looking for Please type hi and submit to start.</b></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="reply-area">
+
+        </div>
+        <br>
+        <input type="text" id="user-input-area" placeholder="type here" oninput="updateText(this.value)">
+        <input type="submit" onclick="reply()" id="send-mssg">
+    </div>
+
+
+
+
+    <script>
+        function togglediv() {
+            const x = document.getElementById("bot-interface");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+            else {
+                x.style.display = "none";
+            }
+        }
+        function reply() {
+            var outputDiv = document.querySelector('#reply-area');
+            outputDiv.textContent = 'What problem are you facing ?';
+            outputDiv.textContent = '1-Cannot get the product i am looking for. 2-having issue while placing order';
+            const user_reply = document.getElementById("user-input-area").value;
+            if (user_reply === '1') {
+                outputDiv.textContent = '1-currently we are in the developement phase and this just a beta version. the product which you are looking for may not have been uploaded yet.';
+            }
+            else if (user_reply === '2') {
+                outputDiv.textContent = 'The order section has not yet been created. It may take some time to make it applicable';
+
+            }
+        }
+        function updateText(value) {
+            var outputDiv = document.querySelector('#reply-area');
+            outputDiv.textContent = value;
+        }
+    </script>
+
+
+</body>
+
+</html>

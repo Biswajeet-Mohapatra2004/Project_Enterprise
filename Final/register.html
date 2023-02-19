@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body
+    background="https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
+    <h1>Create a new Account</h1>
+    <br>
+
+    <form>
+        <div class=" data">
+            <div>
+                <Label>Name</Label>
+                <input type="text" placeholder="Enter your Name " id="name">
+            </div>
+            <br>
+
+            <div>
+                <Label>Email.Id</Label>
+                <input type="email" placeholder="Enter your Mail id" id="mail_id">
+            </div>
+            <br>
+            <div>
+                <Label>Password</Label>
+                <input type="password" placeholder="Enter your password" id="Userpass">
+            </div>
+            <br>
+            <div>
+                <Label>Country</Label>
+                <input type="text" placeholder="Enter your Country" id="country">
+            </div>
+            <br>
+            <div>
+                <Label>Phone.No</Label>
+                <input type="text" placeholder="Enter your Phone number" id="phn_num">
+            </div>
+            <br>
+            <div>
+                <Label>Age</Label>
+                <input type="number" placeholder="Enter your Age" id=" Age">
+            </div>
+            <br>
+            <button id="submit-data" onclick="Create_user()">CREATE NOW</button>
+        </div>
+
+    </form>
+    <script>
+        function Create_user() {
+
+            // get the values from the form
+            const client_name = document.getElementById("name").value;
+            const client_id = document.getElementById("mail_id").value;
+            const client_pwd = document.getElementById("Userpass").value;
+            const client_origin = document.getElementById("country").value;
+            const client_number = document.getElementById("phn_num").value;
+            const client_age = document.getElementById("Age").value;
+
+            // to store data in local storage
+            localStorage.USERID = mail_id;
+            localStorage.PASSCODE = Userpass;
+
+        }
+    </script>
+</body>
+
+</html>
